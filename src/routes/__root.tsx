@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -77,19 +80,39 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Learn with Tez — Online Physics Tutor for Grades 10–12 | Canada, Australia, Ireland" },
+      { name: "description", content: "1:1 online Physics tutoring by Tezline Joseph, a 12+ year WES-certified educator. Grades 10–12 for students in Canada, Australia, and Ireland. First session free." },
+      { name: "author", content: "Tezline Joseph" },
+      { property: "og:site_name", content: "Learn with Tez" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:title", content: "Learn with Tez — Online Physics Tutor for Grades 10–12" },
+      { property: "og:description", content: "Expert 1:1 Physics tutoring for Grades 10–12 — Canada, Australia & Ireland." },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: "Learn with Tez",
+          description: "Online 1:1 Physics tutoring for Grades 10–12 across Canada, Australia, and Ireland.",
+          email: "tezlinejoseph@gmail.com",
+          areaServed: ["Canada", "Australia", "Ireland"],
+          founder: { "@type": "Person", name: "Tezline Joseph" },
+        }),
       },
     ],
   }),
@@ -118,8 +141,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col bg-background">
+        <Navbar />
+        <main className="flex-1">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <Footer />
+        <Toaster richColors position="top-center" />
+      </div>
     </QueryClientProvider>
   );
 }

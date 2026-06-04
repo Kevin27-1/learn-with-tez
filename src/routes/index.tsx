@@ -1,29 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { StatsStrip } from "@/components/StatsStrip";
+import { AboutSection } from "@/components/AboutSection";
+import { SubjectsSection } from "@/components/SubjectsSection";
+import { HowItWorks } from "@/components/HowItWorks";
+import { Testimonials } from "@/components/Testimonials";
+import { Pricing } from "@/components/Pricing";
+import { CTABanner } from "@/components/CTABanner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Learn with Tez — Online Physics Tutor for Grades 10–12 | Canada, Australia, Ireland" },
+      { name: "description", content: "1:1 online Physics tutoring by Tezline Joseph — WES-certified, 12+ years' experience. First session free. Serving Canada, Australia & Ireland." },
+      { property: "og:title", content: "Learn with Tez — Physics Made Clear. Grades Made Better." },
+      { property: "og:description", content: "Expert 1:1 Physics tutoring for Grades 10–12 students in Canada, Australia & Ireland." },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <StatsStrip />
+      <AboutSection />
+      <SubjectsSection />
+      <HowItWorks />
+      <Testimonials />
+      <Pricing />
+      <CTABanner />
+    </>
   );
 }
