@@ -16,11 +16,11 @@ export function Hero() {
             12+ Years · WES-Certified Physics Educator
           </div>
           <h1 className="font-heading text-5xl leading-[1.05] text-primary md:text-6xl">
-            Physics Made Clear. <br />
-            <span className="text-accent">Grades Made Better.</span>
+            Master Physics <br />
+            <span className="text-accent">From Mechanics to Modern Physics</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/70">
-            Expert 1:1 Physics tutoring for Grades 10–12 students in Canada, Australia & Ireland — by a 12-year veteran educator with WES-certified qualifications.
+            Expert 1:1 tutoring in Mechanics, Electromagnetism, Optics, Thermodynamics & more — tailored to your exact curriculum for Grades 10–12 in Canada, Australia & Ireland.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/contact" variant="teal">
