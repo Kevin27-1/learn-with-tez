@@ -8,7 +8,6 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
-  { to: "/#subjects", label: "Subjects" },
   { to: "/about", label: "About" },
   { to: "/how-it-works", label: "How It Works" },
   { to: "/pricing", label: "Pricing" },
