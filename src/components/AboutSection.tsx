@@ -1,5 +1,6 @@
 import { GraduationCap, Globe, MapPin } from "lucide-react";
 import { ABOUT_BIO, CREDENTIALS } from "@/data/content";
+import tezPortrait from "@/assets/tez-portrait.jpeg.asset.json";
 
 const iconMap = { GraduationCap, Globe, MapPin };
 
@@ -9,9 +10,11 @@ export function AboutSection() {
       <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary to-primary/80 shadow-[0_30px_60px_-20px_rgba(11,31,58,0.4)]">
-            <div className="flex h-full w-full items-center justify-center font-heading text-8xl text-accent">
-              Tz
-            </div>
+            <img
+              src={tezPortrait.url}
+              alt="Tezline Joseph, Physics tutor"
+              className="h-full w-full object-cover"
+            />
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-background/95 px-4 py-3 backdrop-blur">
               <div className="font-heading text-lg text-primary">Tezline Joseph</div>
               <div className="text-xs text-muted-foreground">M.Sc. Physics · B.Ed. · 12+ yrs</div>

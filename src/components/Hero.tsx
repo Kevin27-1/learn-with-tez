@@ -1,5 +1,6 @@
 import { CTAButton } from "./CTAButton";
 import { Check, ArrowRight } from "lucide-react";
+import tezPortrait from "@/assets/tez-portrait.jpeg.asset.json";
 
 export function Hero() {
   return (
@@ -57,9 +58,11 @@ export function Hero() {
               <circle cx="200" cy="200" r="8" fill="currentColor" />
             </svg>
             <div className="absolute inset-8 overflow-hidden rounded-full border-4 border-primary/90 bg-gradient-to-br from-primary to-primary/70 shadow-[0_30px_60px_-20px_rgba(11,31,58,0.4)]">
-              <div className="flex h-full w-full items-center justify-center font-heading text-7xl text-accent">
-                Tz
-              </div>
+              <img
+                src={tezPortrait.url}
+                alt="Tezline Joseph, Physics tutor"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-4 left-4 rounded-2xl border border-border bg-card px-4 py-3 shadow-[0_4px_24px_rgba(11,31,58,0.10)]">
               <div className="text-xs text-muted-foreground">Avg. result</div>
