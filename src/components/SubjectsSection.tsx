@@ -2,7 +2,7 @@ import { CURRICULA, TOPICS } from "@/data/content";
 
 export function SubjectsSection() {
   return (
-    <section className="bg-muted/50 py-24">
+    <section id="subjects" className="bg-muted/50 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <div className="text-sm font-semibold uppercase tracking-wider text-accent">What I Teach</div>
