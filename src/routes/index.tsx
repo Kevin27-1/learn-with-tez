@@ -26,9 +26,9 @@ function Index() {
   return (
     <>
       <Hero />
-      <SubjectsSection />
       <StatsStrip />
       <AboutSection />
+      <SubjectsSection />
       <HowItWorks />
       <Testimonials />
       <Pricing />
