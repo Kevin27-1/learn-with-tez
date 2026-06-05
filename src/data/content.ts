@@ -2,7 +2,7 @@ export const SITE = {
   name: "Learn with Tez",
   tagline: "Physics Made Clear. Grades Made Better.",
   email: "tezlinejoseph@gmail.com",
-  phone: "+91 9447386526",
+  phone: "+91 9400505237",
   regions: ["Canada", "Australia", "Ireland"],
 };
 

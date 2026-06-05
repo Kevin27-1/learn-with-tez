@@ -31,7 +31,7 @@ export function SubjectsSection() {
 
         <div className="mt-14">
           <div className="text-center text-sm font-semibold uppercase tracking-wider text-accent">
-            Physics Topics Covered
+            Science
           </div>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             {TOPICS.map((t) => (
