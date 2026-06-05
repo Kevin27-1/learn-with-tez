@@ -9,7 +9,7 @@ export function Hero() {
         <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute right-0 top-40 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       </div>
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-20 md:py-28 lg:grid-cols-2">
+      <div className="mx-auto flex max-w-4xl flex-col items-center gap-12 px-6 py-20 text-center md:py-28">
         <div className="animate-fade-up">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-medium text-primary">
             <span className="h-2 w-2 rounded-full bg-accent" />
@@ -19,10 +19,10 @@ export function Hero() {
             Physics Made Clear. <br />
             <span className="text-accent">Grades Made Better.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-foreground/70">
+          <p className="mx-auto mt-6 max-w-xl text-lg text-foreground/70">
             Expert 1:1 Physics tutoring for Grades 10–12 students in Canada, Australia & Ireland — by a 12-year veteran educator with WES-certified qualifications.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact" variant="teal">
               Book Your Free Trial Session <ArrowRight size={16} />
             </CTAButton>
@@ -30,7 +30,7 @@ export function Hero() {
               See How It Works →
             </CTAButton>
           </div>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-foreground/70">
+          <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground/70">
             {["No contracts", "Flexible scheduling across time zones", "First session free"].map((t) => (
               <li key={t} className="flex items-center gap-2">
                 <Check size={16} className="text-accent" /> {t}
@@ -39,7 +39,7 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md animate-fade-up">
+        <div className="relative mx-auto w-full max-w-sm animate-fade-up">
           <div className="relative aspect-square">
             {/* Decorative physics SVG */}
             <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full text-accent/30">
