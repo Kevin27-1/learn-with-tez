@@ -40,7 +40,7 @@ export function Footer() {
               <a href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="hover:text-accent">{SITE.phone}</a>
             </li>
             <li className="flex items-center gap-3 pt-2">
-              <a href="#" aria-label="LinkedIn" className="text-primary-foreground/80 hover:text-accent">
+              <a href="https://www.linkedin.com/in/tezline-joseph-081992223/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-primary-foreground/80 hover:text-accent">
                 <Linkedin size={18} />
               </a>
               <a href="#" aria-label="WhatsApp" className="text-primary-foreground/80 hover:text-accent">
