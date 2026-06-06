@@ -43,9 +43,9 @@ export function Footer() {
               <a href="https://www.linkedin.com/in/tezline-joseph-081992223/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-primary-foreground/80 hover:text-accent">
                 <Linkedin size={18} />
               </a>
-              <a href="#" aria-label="WhatsApp" className="text-primary-foreground/80 hover:text-accent">
+              <Link to="/contact" aria-label="Contact" className="text-primary-foreground/80 hover:text-accent">
                 <MessageCircle size={18} />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
