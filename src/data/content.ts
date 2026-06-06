@@ -33,9 +33,9 @@ export const CREDENTIALS = [
 export const CURRICULA = [
   { flag: "🇨🇦", title: "Canadian Curriculum", detail: "Grades 10–12 Provincial" },
   { flag: "🇦🇺", title: "Australian Curriculum", detail: "Stages 4–6" },
-  { flag: "🇮🇪", title: "Irish Leaving Certificate", detail: "Ordinary & Higher Level" },
-  { flag: "📘", title: "IGCSE Physics", detail: "Cambridge International" },
-  { flag: "📗", title: "IB Physics", detail: "SL & HL" },
+  { flag: "🇬🇧", title: "A level Physics", detail: "OCR-AQA" },
+  { flag: "📘", title: "GCSE Science", detail: "Cambridge International" },
+  { flag: "📗", title: "IB Science", detail: "SL & HL" },
   { flag: "📙", title: "CBSE & International Equivalents", detail: "Grades 9–12" },
 ];
 
@@ -66,24 +66,24 @@ export const STEPS = [
 export const TESTIMONIALS = [
   {
     quote: "My son went from a C to an A in Physics in just one term. Tez has a gift for making the hard stuff click.",
-    name: "Parent",
-    location: "Ontario",
-    flag: "🇨🇦",
-    grade: "Grade 11",
+    name: "​Sree Rekha",
+    location: "Uk",
+    flag: "🇬🇧",
+    grade: "A level",
   },
   {
     quote: "I used to dread Physics. Now it's my strongest subject going into the Leaving Cert.",
-    name: "Student",
-    location: "Dublin",
-    flag: "🇮🇪",
+    name: "Emma",
+    location: "Australia",
+    flag: "🇦🇺",
     grade: "Grade 12",
   },
   {
     quote: "Clear explanations, structured practice papers, and always available when I had questions.",
-    name: "Student",
-    location: "Melbourne",
+    name: "Krishna",
+    location: "Sydney",
     flag: "🇦🇺",
-    grade: "Year 12",
+    grade: "Year 10",
   },
 ];
 
