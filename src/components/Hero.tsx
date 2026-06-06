@@ -16,7 +16,7 @@ export function Hero() {
             12+ Years · WES-Certified Physics Educator
           </div>
           <h1 className="font-heading text-5xl leading-[1.05] text-primary md:text-6xl">
-            Physics Made Clear. <br />
+            Science Made Clear. <br />
             <span className="text-accent">Grades Made Better.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/70">
