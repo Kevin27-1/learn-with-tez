@@ -61,7 +61,7 @@ export function Hero() {
               <img
                 src={tezPortrait.url}
                 alt="Tezline Joseph, Physics tutor"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top scale-110"
               />
             </div>
             <div className="absolute -bottom-4 left-4 rounded-2xl border border-border bg-card px-4 py-3 shadow-[0_4px_24px_rgba(11,31,58,0.10)]">
