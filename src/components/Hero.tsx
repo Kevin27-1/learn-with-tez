@@ -20,7 +20,7 @@ export function Hero() {
             <span className="text-accent">Grades Made Better.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-foreground/70">
-            Expert 1:1 Science tutoring for Grades 10–12 students in Canada, Australia & Ireland — by a 12-year veteran educator with WES-certified qualifications.
+            Expert 1:1 Science tutoring for Grades 7–12 students in Canada, Australia & Ireland — by a 12-year veteran educator with WES-certified qualifications.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/contact" variant="teal">

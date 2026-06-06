@@ -157,6 +157,6 @@ export const FAQS = [
 ];
 
 export const ABOUT_BIO = [
-  "I'm a Physics educator with over 12 years of teaching experience — from undergraduate lecture halls to live virtual classrooms for students across the globe. I've taught Grades 7 through 12 across CBSE, IGCSE, and IB syllabi, and I know exactly where students get stuck and how to get them unstuck.",
+  "I'm a Physics educator with over 12 years of teaching experience — from undergraduate lecture halls to live virtual classrooms for students across the globe. I've taught Grades 7 through 12 across CBSE, GCSE, and IB syllabi, and I know exactly where students get stuck and how to get them unstuck.",
   "My three degrees — M.Sc. Physics, B.Sc. Physics, and B.Ed. — are all WES-certified for Canadian equivalency, and I've spent the last 3 years delivering live online tutoring to international students like yours. My students regularly move up one to two letter grades within a single term.",
 ];
