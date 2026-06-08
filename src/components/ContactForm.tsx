@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
+import { useServerFn } from "@tanstack/react-start";
 import { CTAButton } from "./CTAButton";
+import { submitTrialRequest } from "@/lib/trial-requests.functions";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -13,11 +15,9 @@ const schema = z.object({
   message: z.string().trim().max(1000).optional().default(""),
 });
 
-// TODO: Replace with your real Formspree endpoint (https://formspree.io/forms)
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/your-id";
-
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
+  const submit = useServerFn(submitTrialRequest);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,21 +31,11 @@ export function ContactForm() {
     }
     setLoading(true);
     try {
-      if (FORMSPREE_ENDPOINT.includes("your-id")) {
-        await new Promise((r) => setTimeout(r, 600));
-        toast.success("Thanks! Your request has been recorded. Tez will be in touch soon.");
-        form.reset();
-        return;
-      }
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
-      });
-      if (!res.ok) throw new Error("Submission failed");
+      await submit({ data: { ...result.data, source: "/contact" } });
       toast.success("Thanks! Tez will reach out shortly.");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error(err);
       toast.error("Something went wrong. Please email tezlinejoseph@gmail.com directly.");
     } finally {
       setLoading(false);
