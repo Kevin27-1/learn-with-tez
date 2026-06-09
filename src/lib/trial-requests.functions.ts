@@ -9,7 +9,7 @@ const fieldCandidates = {
   country: ["Country", "Country / Region", "Location"],
   grade: ["Grade", "Grade Level", "Year Level", "Class", "Year"],
   curriculum: ["Curriculum", "Program", "Syllabus"],
-  timezone: ["Timezone", "Time Zone", "Preferred time zone", "Preferred Time Zone"],
+  timezone: ["Preferred time zone", "Preferred Time Zone", "Timezone", "Time Zone"],
   message: ["Message", "Notes", "Details", "Enquiry"],
   submittedAt: ["Submitted At", "Submitted", "Created At"],
   source: ["Source", "Page", "Form Source"],
@@ -30,12 +30,12 @@ function getInitialSelection(): FieldSelection {
     name: 0,
     email: 0,
     country: 0,
-    grade: 0,
+    grade: null,
     curriculum: 0,
     timezone: 0,
-    message: 0,
-    submittedAt: 0,
-    source: 0,
+    message: null,
+    submittedAt: null,
+    source: null,
   };
 }
 
