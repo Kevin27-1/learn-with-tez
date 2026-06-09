@@ -1,38 +1,31 @@
-## Goal
-Save every "Book Your Free Trial" submission to a new Airtable base/table so Tez can see them in Airtable.
+## Why you don't see a table
 
-## Setup (you do this in Airtable)
-Create a base called **Learn with Tez** with a table **Trial Requests** and these fields (names must match exactly):
+The Airtable connector only gives our server permission to read/write — it can't create bases or tables for you. You need to set those up once in Airtable, then we point the code at them via the Base ID.
 
-- `Name` — Single line text
-- `Email` — Email
-- `Country` — Single line text
-- `Grade` — Single line text
-- `Curriculum` — Single line text
-- `Timezone` — Single line text
-- `Message` — Long text
-- `Submitted At` — Date (include time)
-- `Source` — Single line text
+## Steps for you (in Airtable, ~3 minutes)
 
-Then share the **Base ID** (looks like `appXXXXXXXXXXXXXX`) — found in the Airtable API docs page for the base.
+1. Go to https://airtable.com and click **Add a base → Start from scratch**. Name it **Learn with Tez**.
+2. Rename the default `Table 1` to **Trial Requests** (exact spelling, capital T and R, one space).
+3. Set up these fields (delete the default Notes/Status/Attachments columns):
 
-## What I'll build
+   | Field name      | Field type            |
+   | --------------- | --------------------- |
+   | Name            | Single line text (this is the primary field, just rename it) |
+   | Email           | Email                 |
+   | Country         | Single line text      |
+   | Grade           | Single line text      |
+   | Curriculum      | Single line text      |
+   | Timezone        | Single line text      |
+   | Message         | Long text             |
+   | Submitted At    | Date (toggle "Include a time field") |
+   | Source          | Single line text      |
 
-1. **Connect Airtable** via the Lovable connector (`standard_connectors--connect` with `airtable`). This stores your Airtable token securely as `AIRTABLE_API_KEY` and exposes `LOVABLE_API_KEY` for the gateway.
-2. **Add the Base ID** as a runtime secret `AIRTABLE_BASE_ID` (you paste it once).
-3. **New server function** `src/lib/trial-requests.functions.ts` with `createServerFn({ method: "POST" })`:
-   - Zod-validates the form payload (same schema as the client).
-   - POSTs to `https://connector-gateway.lovable.dev/airtable/v0/{AIRTABLE_BASE_ID}/Trial%20Requests` with headers `Authorization: Bearer ${LOVABLE_API_KEY}` and `X-Connection-Api-Key: ${AIRTABLE_API_KEY}`.
-   - Body: `{ records: [{ fields: { Name, Email, Country, Grade, Curriculum, Timezone, Message, "Submitted At": new Date().toISOString(), Source: "/contact" } }] }`.
-   - Returns `{ ok: true }` or throws with the Airtable error body for debugging.
-4. **Wire up `src/components/ContactForm.tsx`**:
-   - Remove the Formspree placeholder branch.
-   - On submit, call the server function via `useServerFn`.
-   - Keep current toast success / error UX. Reset form on success.
+4. Get the Base ID: open https://airtable.com/api, click the **Learn with Tez** base, and copy the ID shown at the top (looks like `appXXXXXXXXXXXXXX`).
 
-## Notes
-- No DB / Lovable Cloud needed — Airtable is the store.
-- The Airtable token never reaches the browser; it lives in the gateway secret read only inside the server function.
-- If the gateway returns a 4xx, the server function surfaces the message so we can fix field-name mismatches quickly.
+## Steps I'll do (after you confirm the base exists)
 
-After you approve, I'll trigger the Airtable connect prompt and the `AIRTABLE_BASE_ID` secret prompt as the first steps.
+1. Prompt you to update the `AIRTABLE_BASE_ID` secret with the new Base ID.
+2. You submit the form on /contact → I check the Airtable table to confirm the row appears.
+3. If anything 404s or errors, I'll surface the exact field-name mismatch and fix the code.
+
+No code changes are needed — the server function already targets `Trial Requests` in whatever base `AIRTABLE_BASE_ID` points to.
