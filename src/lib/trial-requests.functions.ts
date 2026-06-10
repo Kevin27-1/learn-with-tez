@@ -30,10 +30,10 @@ function getInitialSelection(): FieldSelection {
     name: 0,
     email: 0,
     country: 0,
-    grade: null,
+    grade: 0,
     curriculum: 0,
     timezone: 0,
-    message: null,
+    message: 0,
     submittedAt: null,
     source: null,
   };
