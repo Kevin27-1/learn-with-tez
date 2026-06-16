@@ -85,9 +85,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Tezline Joseph" },
       { property: "og:site_name", content: "Learn with Tez" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Learn with Tez — Online Physics Tutor for Grades 10–12" },
-      { property: "og:description", content: "Expert 1:1 Physics tutoring for Grades 10–12 — Canada, Australia & Ireland." },
+      { property: "og:title", content: "Learn with Tez — Online Physics Tutor for Grades 10–12 | Canada, Australia, Ireland" },
+      { property: "og:description", content: "1:1 online Physics tutoring by Tezline Joseph, a 12+ year WES-certified educator. Grades 10–12 for students in Canada, Australia, and Ireland. First session free." },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Learn with Tez — Online Physics Tutor for Grades 10–12 | Canada, Australia, Ireland" },
+      { name: "twitter:description", content: "1:1 online Physics tutoring by Tezline Joseph, a 12+ year WES-certified educator. Grades 10–12 for students in Canada, Australia, and Ireland. First session free." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1beb429-db5b-4a01-9a7b-d1ea79cac041/id-preview-a7a4cf4a--4954a024-b3c8-4de7-b176-d7d6ad9f2274.lovable.app-1781622008938.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c1beb429-db5b-4a01-9a7b-d1ea79cac041/id-preview-a7a4cf4a--4954a024-b3c8-4de7-b176-d7d6ad9f2274.lovable.app-1781622008938.png" },
     ],
     links: [
       {
